@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>名片 - dlrain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            font-family: 'Segoe UI', '微軟正黑體', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .card-container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: #fff;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+            border-radius: 24px;
+            display: flex;
+            overflow: hidden;
+        }
+        .card-left {
+            background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            padding: 32px 0;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 16px rgba(33,147,176,0.15);
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-right {
+            width: 60%;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .name {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2193b0;
+            margin-bottom: 8px;
+        }
+        .title {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        .info {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+        @media (max-width: 600px) {
+            .card-container {
+                flex-direction: column;
+                max-width: 95vw;
+            }
+            .card-left, .card-right {
+                width: 100%;
+                padding: 24px 0;
+                text-align: center;
+            }
+            .card-right {
+                padding: 24px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card-left">
+            <div class="avatar">
+                <img src="dlrain.png" alt="dlrain">
+            </div>
+        </div>
+        <div class="card-right">
+            <div class="name">林雨</div>
+            <div class="title">前端工程師 / 學生</div>
+            <div class="info">
+                Email: dlrain@example.com<br>
+                GitHub: <a href="https://github.com/dlrain" target="_blank" style="color:#2193b0;text-decoration:none;">dlrain</a><br>
+                電話: 0912-345-678
+            </div>
+        </div>
+    </div>
+</body>
+</html>
