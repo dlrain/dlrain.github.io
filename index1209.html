@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>秋冬棕色風格自我介紹</title>
+    <style>
+        body {
+            background: #f5ede6;
+            font-family: 'Segoe UI', '微軟正黑體', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .intro-section {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #e3d3c2;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(80, 60, 40, 0.08);
+            padding: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            align-items: center;
+        }
+        .photos {
+            position: relative;
+            width: 260px;
+            height: 140px;
+            flex: none;
+        }
+        .photos img {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid #a67c52;
+            background: #e3d3c2;
+            box-shadow: 0 2px 8px rgba(80, 60, 40, 0.08);
+            transition: box-shadow 0.2s;
+        }
+        .photos img:nth-child(1) {
+            left: 0; top: 10px; transform: rotate(-8deg);
+            z-index: 2;
+        }
+        .photos img:nth-child(2) {
+            left: 60px; top: 0; transform: rotate(6deg);
+            z-index: 3;
+        }
+        .photos img:nth-child(3) {
+            left: 120px; top: 18px; transform: rotate(-4deg);
+            z-index: 1;
+        }
+        .photos img:nth-child(4) {
+            left: 180px; top: 6px; transform: rotate(10deg);
+            z-index: 4;
+        }
+        .intro-text {
+            flex: 2 1 320px;
+            color: #5c3a1e;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            background: #f8f3ee;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 6px solid #a67c52;
+        }
+        @media (max-width: 700px) {
+            .intro-section {
+                flex-direction: column;
+                gap: 24px;
+                padding: 16px;
+            }
+            .photos {
+                justify-content: flex-start;
+            }
+            .intro-text {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="intro-section">
+        <div class="photos">
+            <img src="photo1.jpg" alt="個人照片1">
+            <img src="photo2.jpg" alt="個人照片2">
+            <!-- 可再加入第三、第四張照片 -->
+            <!-- <img src="photo3.jpg" alt="個人照片3"> -->
+            <!-- <img src="photo4.jpg" alt="個人照片4"> -->
+        </div>
+        <div class="intro-text">
+            hi
+        </div>
+    </section>
+</body>
+</html>
