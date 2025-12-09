@@ -16,7 +16,7 @@
             background: #e3d3c2;
             border-radius: 16px;
             box-shadow: 0 4px 16px rgba(80, 60, 40, 0.08);
-            padding: 32px;
+            padding: 10px;
             display: flex;
             flex-wrap: wrap;
             gap: 32px;
@@ -24,46 +24,45 @@
         }
         .photos {
             position: relative;
-            width: 260px;
-            height: 140px;
+            width: 140px;
+            height: 260px;
             flex: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top:128px;
         }
         .photos img {
-            position: absolute;
-            width: 120px;
-            height: 120px;
+            position: static;
+            width: 110px;
+            height: 110px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 50%;
             border: 3px solid #a67c52;
             background: #e3d3c2;
-            box-shadow: 0 2px 8px rgba(80, 60, 40, 0.08);
-            transition: box-shadow 0.2s;
-        }
-        .photos img:nth-child(1) {
-            left: 0; top: 10px; transform: rotate(-8deg);
-            z-index: 2;
-        }
-        .photos img:nth-child(2) {
-            left: 60px; top: 0; transform: rotate(6deg);
-            z-index: 3;
-        }
-        .photos img:nth-child(3) {
-            left: 120px; top: 18px; transform: rotate(-4deg);
-            z-index: 1;
-        }
-        .photos img:nth-child(4) {
-            left: 180px; top: 6px; transform: rotate(10deg);
-            z-index: 4;
+            box-shadow: none;
+            margin: 0;
         }
         .intro-text {
-            flex: 2 1 320px;
             color: #5c3a1e;
             font-size: 1.15rem;
             line-height: 1.8;
             background: #f8f3ee;
             border-radius: 12px;
-            padding: 20px;
+            padding: 24px 28px;
             border-left: 6px solid #a67c52;
+            min-width: 0;
+            width: auto;
+            max-width: 100%;
+        }
+        .intro-name {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #6b3e26;
+            letter-spacing: 1px;
+            line-height: 1.2;
         }
         @media (max-width: 700px) {
             .intro-section {
@@ -84,13 +83,12 @@
     <section class="intro-section">
         <div class="photos">
             <img src="photo1.jpg" alt="個人照片1">
-            <img src="photo2.jpg" alt="個人照片2">
-            <!-- 可再加入第三、第四張照片 -->
-            <!-- <img src="photo3.jpg" alt="個人照片3"> -->
-            <!-- <img src="photo4.jpg" alt="個人照片4"> -->
         </div>
-        <div class="intro-text">
-            hi
+        <div style="flex:4 1 420px;display:flex;flex-direction:column;gap:18px;justify-content:flex-start;">
+            <div class="intro-name">DL Rain</div>
+            <div class="intro-text">
+                hi
+            </div>
         </div>
     </section>
 </body>
