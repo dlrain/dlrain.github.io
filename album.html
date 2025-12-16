@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <title>相簿 / Album</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        :root{--gap:16px;--bg:#f5ede6;--card:#e3d3c2;--accent:#a67c52}
+        body{margin:0;font-family:'Segoe UI','微軟正黑體',Arial,sans-serif;background:var(--bg);color:#3b2a1f}
+        .container{max-width:1100px;margin:36px auto;padding:20px}
+        h1{margin:0 0 18px;font-size:1.6rem;color:#6b3e26}
+        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:var(--gap)}
+        .tile{display:block;position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#efe6df,#f7f1ee);box-shadow:0 6px 16px rgba(60,40,20,0.06);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
+        .tile:hover{transform:translateY(-6px);box-shadow:0 18px 30px rgba(60,40,20,0.12)}
+        .thumb{width:100%;height:0;padding-bottom:80%;background-size:cover;background-position:center;background-color:#f0e9e2}
+        .info{padding:10px 12px;background:linear-gradient(to top,rgba(255,255,255,0.6),transparent);}
+        .title{font-weight:700;font-size:0.98rem;margin-bottom:6px}
+        .subtitle{font-size:0.86rem;color:#62402a}
+        .count-badge{position:absolute;top:10px;left:10px;background:rgba(0,0,0,0.45);color:#fff;padding:6px 8px;border-radius:999px;font-size:0.8rem}
+        @media (max-width:520px){.grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>相簿範本（點擊每一格可連到其他網址）</h1>
+        <p style="margin:0 0 18px;color:#5c3a1e;">說明：每個格子的連結放在 <code>&lt;a href="..."&gt;</code>，請直接修改 href 為你要連到的網址；也可以把圖片路徑換成你自己的檔案路徑。</p>
+        <section class="grid" id="albumGrid">
+            <!-- 範例 24 格：把 href 改成你要的網址，把 style background-image 改成圖片路徑或使用 <img> 標籤 -->
+            <a class="tile" href="https://example.com/1" target="_blank">
+                <div class="thumb" style="background-image:url('aheartisaterriblethingtobreak.jpg')"></div>
+                <div class="info"><div class="title">格子 1</div><div class="subtitle">範例連結 1</div></div>
+            </a>
+            <a class="tile" href="https://example.com/2" target="_blank">
+                <div class="thumb" style="background-image:url('feelingformylife.jpg')"></div>
+                <div class="info"><div class="title">格子 2</div><div class="subtitle">範例連結 2</div></div>
+            </a>
+            <a class="tile" href="https://example.com/3" target="_blank">
+                <div class="thumb" style="background-image:url('heartbreaksouvenirs.jpg')"></div>
+                <div class="info"><div class="title">格子 3</div><div class="subtitle">範例連結 3</div></div>
+            </a>
+            <a class="tile" href="https://example.com/4" target="_blank">
+                <div class="thumb" style="background-image:url('songiwroteinmybedroom.jpg')"></div>
+                <div class="info"><div class="title">格子 4</div><div class="subtitle">範例連結 4</div></div>
+            </a>
+            <a class="tile" href="https://example.com/5" target="_blank">
+                <div class="thumb" style="background-image:url('1021/HW/as.jpg')"></div>
+                <div class="info"><div class="title">格子 5</div><div class="subtitle">範例連結 5</div></div>
+            </a>
+            <a class="tile" href="https://example.com/6" target="_blank">
+                <div class="thumb" style="background-image:url('1014/dlrain.jpg')"></div>
+                <div class="info"><div class="title">格子 6</div><div class="subtitle">範例連結 6</div></div>
+            </a>
+            <!-- 以下使用漸層色作為示意縮圖，方便沒圖檔時也能看到效果 -->
+            <a class="tile" href="https://example.com/7" target="_blank">
+                <div class="thumb" style="background-image:linear-gradient(135deg,#f6eaea,#efe4db)"></div>
+                <div class="info"><div class="title">格子 7</div><div class="subtitle">範例連結 7</div></div>
+            </a>
+            <a class="tile" href="https://example.com/8" target="_blank">
+                <div class="thumb" style="background-image:linear-gradient(135deg,#efe6df,#f7f1ee)"></div>
+                <div class="info"><div class="title">格子 8</div><div class="subtitle">範例連結 8</div></div>
+            </a>
+            <a class="tile" href="https://example.com/9" target="_blank">
+                <div class="thumb" style="background-image:linear-gradient(135deg,#e9e1da,#f6efe8)"></div>
+                <div class="info"><div class="title">格子 9</div><div class="subtitle">範例連結 9</div></div>
+            </a>
+            <a class="tile" href="https://example.com/10" target="_blank">
+                <div class="thumb" style="background-image:linear-gradient(135deg,#efe6e0,#f9f5f2)"></div>
+                <div class="info"><div class="title">格子 10</div><div class="subtitle">範例連結 10</div></div>
+            </a>
+            <a class="tile" href="https://example.com/11" target="_blank">
+                <div class="thumb" style="background-image:linear-gradient(135deg,#efe0d9,#f7efe8)"></div>
+                <div class="info"><div class="title">格子 11</div><div class="subtitle">範例連結 11</div></div>
+            </a>
+            <a class="tile" href="https://example.com/12" target="_blank">
+                <div class="thumb" style="background-image:linear-gradient(135deg,#f3e9e1,#faf5f2)"></div>
+                <div class="info"><div class="title">格子 12</div><div class="subtitle">範例連結 12</div></div>
+            </a>
+            <!-- 再來 12 格 -->
+            <a class="tile" href="https://example.com/13" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#f6efe7,#fff8f5)"></div><div class="info"><div class="title">格子 13</div><div class="subtitle">範例連結 13</div></div></a>
+            <a class="tile" href="https://example.com/14" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#efe6df,#f9f2ee)"></div><div class="info"><div class="title">格子 14</div><div class="subtitle">範例連結 14</div></div></a>
+            <a class="tile" href="https://example.com/15" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#efe7e0,#fbf5f1)"></div><div class="info"><div class="title">格子 15</div><div class="subtitle">範例連結 15</div></div></a>
+            <a class="tile" href="https://example.com/16" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#f5eee6,#fff9f6)"></div><div class="info"><div class="title">格子 16</div><div class="subtitle">範例連結 16</div></div></a>
+            <a class="tile" href="https://example.com/17" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#efe5dd,#f8f2ef)"></div><div class="info"><div class="title">格子 17</div><div class="subtitle">範例連結 17</div></div></a>
+            <a class="tile" href="https://example.com/18" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#efe4de,#f7f1ee)"></div><div class="info"><div class="title">格子 18</div><div class="subtitle">範例連結 18</div></div></a>
+            <a class="tile" href="https://example.com/19" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#f2ebe3,#fff8f6)"></div><div class="info"><div class="title">格子 19</div><div class="subtitle">範例連結 19</div></div></a>
+            <a class="tile" href="https://example.com/20" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#efe7df,#fbf5f1)"></div><div class="info"><div class="title">格子 20</div><div class="subtitle">範例連結 20</div></div></a>
+            <a class="tile" href="https://example.com/21" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#efe6e0,#fff6f3)"></div><div class="info"><div class="title">格子 21</div><div class="subtitle">範例連結 21</div></div></a>
+            <a class="tile" href="https://example.com/22" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#f7efe7,#fff9f7)"></div><div class="info"><div class="title">格子 22</div><div class="subtitle">範例連結 22</div></div></a>
+            <a class="tile" href="https://example.com/23" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#efe9e1,#fbf6f3)"></div><div class="info"><div class="title">格子 23</div><div class="subtitle">範例連結 23</div></div></a>
+            <a class="tile" href="https://example.com/24" target="_blank"><div class="thumb" style="background-image:linear-gradient(135deg,#efe2db,#faf2ef)"></div><div class="info"><div class="title">格子 24</div><div class="subtitle">範例連結 24</div></div></a>
+        </section>
+    </div>
+</body>
+</html>
