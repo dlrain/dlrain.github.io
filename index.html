@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>秋冬棕色風格自我介紹</title>
+    <title>網站設計成果</title>
     <style>
         body {
             background: #f5ede6;
@@ -12,27 +12,27 @@
         }
         .intro-section {
             max-width: 800px;
-            margin: 40px auto;
+            margin: 30px auto;
             background: #e3d3c2;
             border-radius: 16px;
             box-shadow: 0 4px 16px rgba(80, 60, 40, 0.08);
             padding: 10px;
             display: flex;
             flex-wrap: wrap;
-            gap: 32px;
+            gap: 20px;
             align-items: center;
         }
         .photos {
             position: relative;
             width: 140px;
-            height: 260px;
+            height: 140px;
             flex: none;
             display: flex;
             flex-direction: column;
             gap: 16px;
             align-items: center;
             justify-content: flex-start;
-            margin-top:128px;
+            margin-top:80px;
         }
         .photos img {
             position: static;
@@ -64,19 +64,20 @@
             letter-spacing: 1px;
             line-height: 1.2;
         }
-        @media (max-width: 700px) {
+        @media (max-width: 360px) {
             .intro-section {
                 flex-direction: column;
-                gap: 24px;
-                padding: 16px;
+                gap: 4px;
+                padding: 6px;
             }
             .photos {
                 justify-content: flex-start;
             }
             .intro-text {
-                padding: 12px;
+                padding: 0px;
             }
         }
+        #albumGrid {padding: 20px;}
         :root{--gap:16px;--bg:#f5ede6;--card:#e3d3c2;--accent:#a67c52}
         body{margin:0;font-family:'Segoe UI','微軟正黑體',Arial,sans-serif;background:var(--bg);color:#3b2a1f}
         .container{max-width:1100px;margin:36px auto;padding:20px}
@@ -97,8 +98,8 @@
         <div class="nav-container">
             <a href="index.html" class="nav-logo">網站設計成果</a>
             <div class="nav-links">
-                <a href="index.html">自我介紹</a>
-                <a href="album.html">作品集</a>
+                <a href="#intro">自我介紹</a>
+                <a href="#albumGrid">作品集</a>
             </div>
         </div>
     </nav>
@@ -145,51 +146,67 @@
     </style>
     <section class="intro-section">
         <div class="photos">
-            <img src="photo1.jpg" alt="個人照片1">
+            <img src="myPhoto.jpg" alt="個人照片1">
         </div>
-        <div style="flex:4 1 420px;display:flex;flex-direction:column;gap:18px;justify-content:flex-start;">
+        <div style="flex:4 1 120px;display:flex;flex-direction:column;gap:18px;justify-content:flex-start;">
             <div class="intro-name">李沛霏</div>
             <div class="intro-text">
-                hi
+                國立台北教育大學資訊科學系一年級｜喜歡用攝影和文字來記錄日常
             </div>
         </div>
     </section>
         <section class="grid" id="albumGrid">
-            <a class="tile" href="https://dlrain.github.io/0930/index.html" target="_blank">
-                <div class="thumb" style="background-image:url('aheartisaterriblethingtobreak.jpg')"></div>
-                <div class="info"><div class="title">0930</div><div class="subtitle">範例連結 1</div></div>
-            </a>
-            <a class="tile" href="https://dlrain.github.io/1007/index.html" target="_blank">
-                <div class="thumb" style="background-image:url('.jpg')"></div>
-                <div class="info"><div class="title">1007</div><div class="subtitle">範例連結 2</div></div>
-            </a>
-            <a class="tile" href="https://dlrain.github.io/1014/ex1.html" target="_blank">
-                <div class="thumb" style="background-image:url('.jpg')"></div>
-                <div class="info"><div class="title">1014-1</div><div class="subtitle">範例連結 3</div></div>
-            </a>
-            <a class="tile" href="https://dlrain.github.io/1014/namecard.html" target="_blank">
-                <div class="thumb" style="background-image:url('.jpg')"></div>
-                <div class="info"><div class="title">1014-2</div><div class="subtitle">範例連結 4</div></div>
-            </a>
-            <a class="tile" href="https://dlrain.github.io/1014/1014bonus.html" target="_blank">
-                <div class="thumb" style="background-image:url('.jpg')"></div>
-                <div class="info"><div class="title">1014-3</div><div class="subtitle">範例連結 5</div></div>
-            </a>
-            <a class="tile" href="https://dlrain.github.io/1021/index.html" target="_blank">
-                <div class="thumb" style="background-image:url('.jpg')"></div>
-                <div class="info"><div class="title">1021</div><div class="subtitle">範例連結 6</div></div>
-            </a>
-            <a class="tile" href="https://dlrain.github.io/1118/index.html" target="_blank">
-                <div class="thumb" style="background-image:url('.jpg')"></div>
-                <div class="info"><div class="title">1118</div><div class="subtitle">範例連結 7</div></div>
+            <a class="tile" href="https://sites.google.com/stu.ntue.edu.tw/dlrain/main-page" target="_blank">
+                <div class="thumb" style="background-image:url('0916.png')"></div>
+                <div class="info"><div class="title">0916</div><div class="subtitle">Google協作平台製作個人網站</div></div>
             </a>
             <a class="tile" href="https://dlrain.github.io/old_index.html" target="_blank">
-                <div class="thumb" style="background-image:url('.jpg')"></div>
-                <div class="info"><div class="title">1104</div><div class="subtitle">範例連結 8</div></div>
+                <div class="thumb" style="background-image:url('0923.png')"></div>
+                <div class="info"><div class="title">0923</div><div class="subtitle">和AI第一次協作成果</div></div>
+            </a>
+            <a class="tile" href="https://dlrain.github.io/0930/index.html" target="_blank">
+                <div class="thumb" style="background-image:url('0930.png')"></div>
+                <div class="info"><div class="title">0930</div><div class="subtitle">字型更換、表格建立、圖片插入</div></div>
+            </a>
+            <a class="tile" href="https://dlrain.github.io/1007/index.html" target="_blank">
+                <div class="thumb" style="background-image:url('1007.png')"></div>
+                <div class="info"><div class="title">1007</div><div class="subtitle">表格建立、圖片插入</div></div>
+            </a>
+            <a class="tile" href="https://dlrain.github.io/1014/ex1.html" target="_blank">
+                <div class="thumb" style="background-image:url('1014-1.png')"></div>
+                <div class="info"><div class="title">1014-1</div><div class="subtitle">背景和文字顏色更換</div></div>
+            </a>
+            <a class="tile" href="https://dlrain.github.io/1014/namecard.html" target="_blank">
+                <div class="thumb" style="background-image:url('1014-2.png')"></div>
+                <div class="info"><div class="title">1014-2</div><div class="subtitle">名片練習</div></div>
+            </a>
+            <a class="tile" href="https://dlrain.github.io/1014/1014bonus.html" target="_blank">
+                <div class="thumb" style="background-image:url('1014-3.png')"></div>
+                <div class="info"><div class="title">1014-3</div><div class="subtitle">區塊練習</div></div>
+            </a>
+            <a class="tile" href="https://dlrain.github.io/1021/index.html" target="_blank">
+                <div class="thumb" style="background-image:url('1021-1.png')"></div>
+                <div class="info"><div class="title">1021-1</div><div class="subtitle">w3schools模板套用</div></div>
+            </a>
+            <a class="tile" href="https://dlrain.github.io/1021/HW/index.html" target="_blank">
+                <div class="thumb" style="background-image:url('1021-2.png')"></div>
+                <div class="info"><div class="title">1021-2</div><div class="subtitle">自訂主題網站製作</div></div>
             </a>
             <a class="tile" href="https://dlrain.github.io/as_index.html" target="_blank">
-                <div class="thumb" style="background-image:url('.jpg')"></div>
-                <div class="info"><div class="title">1111</div><div class="subtitle">範例連結 9</div></div>
+                <div class="thumb" style="background-image:url('1104.png')"></div>
+                <div class="info"><div class="title">1104</div><div class="subtitle">bootstrap模板套用</div></div>
+            </a>
+            <a class="tile" href="https://dlrain.github.io/as_index.html" target="_blank">
+                <div class="thumb" style="background-image:url('1111.png')"></div>
+                <div class="info"><div class="title">1111</div><div class="subtitle">bootstrap模板套用</div></div>
+            </a>
+            <a class="tile" href="https://dlrain.github.io/1118/index.html" target="_blank">
+                <div class="thumb" style="background-image:url('1118.png')"></div>
+                <div class="info"><div class="title">1118</div><div class="subtitle">個人網站實作-教學科技應用設計競賽</div></div>
+            </a>
+            <a class="tile" href="https://sites.google.com/stu.ntue.edu.tw/202511250/%E9%A6%96%E9%A0%81" target="_blank">
+                <div class="thumb" style="background-image:url('1125.png')"></div>
+                <div class="info"><div class="title">1125</div><div class="subtitle">小組網站實作-130向前走</div></div>
             </a>
 </body>
 </html>
